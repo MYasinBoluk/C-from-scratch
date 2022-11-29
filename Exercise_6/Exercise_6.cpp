@@ -10,6 +10,8 @@ class Silah {
         int mermiKapasitesi;
         std::string renk;
 
+
+        virtual void ates() = 0;
 };
 
 class Ak47 :public Silah{
@@ -18,8 +20,8 @@ class Ak47 :public Silah{
         int KayisUzunlugu;
         bool durbun;
     
-        void atesEt() {
-
+        void ates() {
+            std::cout << "tratata" << std::endl;
         }
 
 };
@@ -27,8 +29,8 @@ class Pistol : public Silah {
     public:
         int kurmaKoluDeseni;
 
-        void atesEt() {
-
+        void ates() {
+            std::cout << "bam bam" << std::endl;
         }
         
         
@@ -40,8 +42,8 @@ class M1 :public Silah{
         int KayisUzunlugu;
         int KurmaPozisyonu;
 
-        void atesEt() {
-
+        void ates() {
+            std::cout << "viirrrrrrreeeaaaa" << std::endl;
         }
 };
 
@@ -53,18 +55,28 @@ void goster(Silah* silahptr) {
         
 }
 
+void atesEt (Silah* silahPtr) {
+    silahPtr->ates();
+}
+
 int main()
 {
     Ak47 ak47;
-    ak47.isim = "Ak47";
-    goster(&ak47);
-
     Pistol pistol;
-    pistol.isim = "Pistol";
-    goster(&pistol);
     M1 m1;
-    m1.isim = "M1";
+    ak47.isim = "ak47: ";
+    m1.isim = "m1: ";
+    pistol.isim = "pistol: ";
+
+    goster(&ak47);
+    atesEt(&ak47);
     goster(&m1);
+    atesEt(&m1);
+    goster(&pistol);
+    atesEt(&pistol);
+
+
+   
     return 0;
 
 }
