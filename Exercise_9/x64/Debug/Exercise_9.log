@@ -1,0 +1,3 @@
+﻿  Exercise_9.cpp
+C:\Users\krgya\Desktop\Exercises\c++\Basic_Application\Exercise_9\Exercise_9.cpp(18,1): warning C4305: '=': 'double' iken 'float' olarak kesildi
+  Exercise_9.vcxproj -> C:\Users\krgya\Desktop\Exercises\c++\Basic_Application\x64\Debug\Exercise_9.exe
